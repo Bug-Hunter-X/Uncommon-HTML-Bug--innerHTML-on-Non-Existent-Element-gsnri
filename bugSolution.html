@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    const element = document.getElementById('nonExistentElement');
+    if (element) {
+      element.innerHTML = 'This text will be shown.';
+    } else {
+      console.error('Element with id "nonExistentElement" not found.');
+    }
+    
+    // This should work since it's setting the innerHTML of an existing element
+    document.getElementById('myDiv').innerHTML = 'This text will replace the original.';
+  </script>
+</body>
+</html>
