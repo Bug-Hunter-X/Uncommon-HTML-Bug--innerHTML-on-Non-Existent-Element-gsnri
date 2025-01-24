@@ -1,0 +1,3 @@
+This repository demonstrates an uncommon HTML bug related to DOM manipulation. The `bug.html` file contains code that attempts to set the `innerHTML` property of a non-existent element. This results in a silent failure; no error is thrown, but the intended effect (setting the innerHTML) does not occur.
+
+The `bugSolution.html` file provides a corrected version where appropriate checks are implemented to prevent this issue.  The key is to always check if an element exists before attempting to manipulate its properties. This example highlights the importance of robust error handling when working with the DOM.
